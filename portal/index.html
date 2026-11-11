@@ -1,0 +1,19 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><title>合作方统计门户</title>
+<style>body{font:18px sans-serif;max-width:900px;margin:40px auto;background:#f5f7fa;color:#243244}button,select{font:inherit;padding:10px;margin:8px}li{margin:16px}</style>
+<h1>合作方统计导出</h1><button id="login">进入演练账号</button><button id="expire">结束会话</button>
+<form id="filters"><label>机构<select id="org"><option value="a">甲机构</option><option value="b">乙机构</option></select></label>
+<label>期间<select id="period"></select></label><label>口径<select id="metric"></select></label><button id="export" disabled>生成导出</button></form>
+<p id="selected">尚未选择</p><p id="status" role="status">请先进入账号</p><ul id="downloads"></ul>
+<script>
+const $=x=>document.getElementById(x);let generation=0;
+async function post(path,body={}){const r=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});const v=await r.json();if(!r.ok)throw Error(v.error);return v;}
+async function sync(){const value=await post('/select',{org:$('org').value,period:$('period').value,metric:$('metric').value});$('selected').textContent=value.org+' / '+value.period+' / '+value.metric;$('selected').dataset.org=value.org;$('export').disabled=false;}
+async function options(){const g=++generation;$('export').disabled=true;const value=await(await fetch('/options?org='+$('org').value)).json();if(g!==generation)return;
+ $('period').innerHTML=value.periods.map(x=>'<option>'+x+'</option>').join('');$('metric').innerHTML=value.metrics.map(x=>'<option>'+x+'</option>').join('');await sync();}
+$('login').onclick=async()=>{await post('/login');await options();$('status').textContent='账号已进入';};
+$('org').onchange=()=>options().catch(e=>$('status').textContent=e.message);$('period').onchange=$('metric').onchange=()=>sync().catch(e=>$('status').textContent=e.message);
+$('expire').onclick=async()=>{await post('/expire');$('status').textContent='登录已失效';};
+$('filters').onsubmit=async e=>{e.preventDefault();try{await sync();const item=await post('/export');const li=document.createElement('li');li.dataset.exportId=item.export_id;li.textContent=item.org+' '+item.period+' '+item.metric+' 处理中';$('downloads').prepend(li);
+ const end=Date.now()+10000;async function poll(){const r=await fetch('/export/'+item.export_id);if(r.status===202){if(Date.now()<end)setTimeout(poll,40);else li.textContent='生成超时';return;}if(!r.ok){li.textContent='下载失效';return;}const blob=await r.blob();const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=item.export_id+'.csv';a.textContent='下载 '+item.org+' '+item.period+' '+item.metric;li.replaceChildren(a);}poll();
+ }catch(e){$('status').textContent=e.message;}};
+</script></html>

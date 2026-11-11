@@ -1,0 +1,12 @@
+node_modules/
+var/
+coverage/
+*.tmp
+
+.env
+*.key
+*.pem
+__pycache__/
+*.pyc
+node_modules/
+.demo-state/
