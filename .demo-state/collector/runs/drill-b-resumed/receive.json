@@ -1,0 +1,9 @@
+{
+  "exportId": "be137720cd494083b43b5fb0330e8c93",
+  "filters": {
+    "org": "b",
+    "period": "2026-10",
+    "metric": "gross"
+  },
+  "runId": "drill-b-resumed"
+}

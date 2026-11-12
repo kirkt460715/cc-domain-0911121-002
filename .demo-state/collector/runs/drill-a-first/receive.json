@@ -1,0 +1,9 @@
+{
+  "exportId": "711b9dd72e7846b191cd989eff940ec9",
+  "filters": {
+    "org": "a",
+    "period": "2026-10",
+    "metric": "net"
+  },
+  "runId": "drill-a-first"
+}

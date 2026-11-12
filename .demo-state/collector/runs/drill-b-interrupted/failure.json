@@ -1,0 +1,17 @@
+{
+  "error": "collector_error",
+  "stage": "collector",
+  "message": "演练故障：导出已生成，下载前中断",
+  "context": {
+    "exportId": "5883728b36b940c9a14ca16e7d111734",
+    "interrupted": true
+  },
+  "runId": "drill-b-interrupted",
+  "state": "failed",
+  "filters": {
+    "org": "b",
+    "period": "2026-10",
+    "metric": "gross"
+  },
+  "elapsedMs": 601
+}

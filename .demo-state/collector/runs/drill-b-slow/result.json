@@ -1,0 +1,27 @@
+{
+  "runId": "drill-b-slow",
+  "state": "completed",
+  "sessionId": "f6cf384d2569445999c9c650d5330756",
+  "pageConfirmed": {
+    "org": "b",
+    "period": "2026-10",
+    "metric": "gross",
+    "text": "b / 2026-10 / gross"
+  },
+  "filters": {
+    "org": "b",
+    "period": "2026-10",
+    "metric": "gross"
+  },
+  "exportId": "93157228dfb44111bed1788d54b71a2e",
+  "csvPath": ".demo-state/collector/runs/drill-b-slow/93157228dfb44111bed1788d54b71a2e.csv",
+  "csvSha256": "964b4c3ec9fca4a47356ee31f7225bc847f5e3396a37db49bc285c52794eab18",
+  "rowCount": 1,
+  "importId": "portal-b-2026-10-gross",
+  "harborReference": "partner_metrics:2",
+  "harborStatus": "validated",
+  "replay": true,
+  "committed": false,
+  "gate": null,
+  "elapsedMs": 9119
+}

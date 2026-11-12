@@ -1,0 +1,12 @@
+{
+  "filters": {
+    "org": "b",
+    "period": "2026-10",
+    "metric": "gross"
+  },
+  "faults": {
+    "export_delay": 8
+  },
+  "actor": "alice",
+  "baseUrl": "http://127.0.0.1:40497"
+}

@@ -1,0 +1,12 @@
+{
+  "filters": {
+    "org": "a",
+    "period": "2026-10",
+    "metric": "net"
+  },
+  "faults": {
+    "withdraw_filter": true
+  },
+  "actor": "alice",
+  "baseUrl": "http://127.0.0.1:40497"
+}

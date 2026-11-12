@@ -1,0 +1,19 @@
+{
+  "error": "provenance_mismatch",
+  "stage": "provenance",
+  "message": "CSV 的导出号不属于本轮，疑似上一轮迟到文件",
+  "context": {
+    "index": 0,
+    "expectedExportId": "f6446ecc375f4ba991ea35dc0c9954ee",
+    "actualExportId": "ffffffffffffffffffffffffffffffff"
+  },
+  "runId": "drill-b-foreign",
+  "state": "failed",
+  "filters": {
+    "org": "b",
+    "period": "2026-10",
+    "metric": "gross"
+  },
+  "elapsedMs": 652,
+  "quarantinedFile": ".demo-state/collector/quarantine/drill-b-foreign-f6446ecc375f4ba991ea35dc0c9954ee.csv"
+}

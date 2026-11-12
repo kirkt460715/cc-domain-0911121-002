@@ -1,0 +1,30 @@
+{
+  "runId": "drill-a-first",
+  "state": "completed",
+  "sessionId": "e1997ae17c4c44b8afe09ecc0409595c",
+  "pageConfirmed": {
+    "org": "a",
+    "period": "2026-10",
+    "metric": "net",
+    "text": "a / 2026-10 / net"
+  },
+  "filters": {
+    "org": "a",
+    "period": "2026-10",
+    "metric": "net"
+  },
+  "exportId": "711b9dd72e7846b191cd989eff940ec9",
+  "csvPath": ".demo-state/collector/runs/drill-a-first/711b9dd72e7846b191cd989eff940ec9.csv",
+  "csvSha256": "32565246dc11f989bae65381ac91b6028d52f82d0d015e699ce2f79a9db8f47b",
+  "rowCount": 1,
+  "importId": "portal-a-2026-10-net",
+  "harborReference": "partner_metrics:1",
+  "harborStatus": "validated",
+  "replay": false,
+  "committed": true,
+  "gate": {
+    "passed": true,
+    "failures": []
+  },
+  "elapsedMs": 1029
+}

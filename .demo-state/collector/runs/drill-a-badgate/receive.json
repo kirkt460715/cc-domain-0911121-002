@@ -1,0 +1,9 @@
+{
+  "exportId": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+  "filters": {
+    "org": "a",
+    "period": "2026-11",
+    "metric": "gross"
+  },
+  "runId": "drill-a-badgate"
+}

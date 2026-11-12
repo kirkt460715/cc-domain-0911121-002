@@ -1,0 +1,9 @@
+{
+  "exportId": "2efe2677f67f41b4983564705d1f528a",
+  "filters": {
+    "org": "b",
+    "period": "2026-10",
+    "metric": "gross"
+  },
+  "runId": "drill-b-switch"
+}

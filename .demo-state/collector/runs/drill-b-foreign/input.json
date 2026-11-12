@@ -1,0 +1,21 @@
+{
+  "filters": {
+    "org": "b",
+    "period": "2026-10",
+    "metric": "gross"
+  },
+  "faults": {
+    "fulfill_download": {
+      "exportId": "ffffffffffffffffffffffffffffffff",
+      "filters": {
+        "org": "b",
+        "period": "2026-10",
+        "metric": "gross"
+      },
+      "replace": false,
+      "csv": "export_id,org,period,metric,record_id,amount\nffffffffffffffffffffffffffffffff,b,2026-10,gross,r1,125.50"
+    }
+  },
+  "actor": "alice",
+  "baseUrl": "http://127.0.0.1:40497"
+}

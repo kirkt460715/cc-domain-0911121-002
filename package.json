@@ -8,6 +8,8 @@
     "test": "node --test tests/*.test.js",
     "build": "node src/syntax.js",
     "acceptance": "node src/example.js",
+    "portal-drill": "python -I collector/drill.py",
+    "portal-test": "python -I tests_py/test_provenance.py && python -I tests_py/test_browser.py",
     "start": "node src/main.js"
   }
 }

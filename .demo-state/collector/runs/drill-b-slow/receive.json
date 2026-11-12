@@ -1,0 +1,9 @@
+{
+  "exportId": "93157228dfb44111bed1788d54b71a2e",
+  "filters": {
+    "org": "b",
+    "period": "2026-10",
+    "metric": "gross"
+  },
+  "runId": "drill-b-slow"
+}

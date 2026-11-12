@@ -1,0 +1,41 @@
+{
+  "runId": "drill-a-badgate",
+  "state": "quarantined",
+  "sessionId": "eb588f0da66642c0ba8018d949000d2b",
+  "pageConfirmed": {
+    "org": "a",
+    "period": "2026-11",
+    "metric": "gross",
+    "text": "a / 2026-11 / gross"
+  },
+  "filters": {
+    "org": "a",
+    "period": "2026-11",
+    "metric": "gross"
+  },
+  "exportId": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+  "csvPath": ".demo-state/collector/runs/drill-a-badgate/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.csv",
+  "csvSha256": "51e0c7d50f05bb2334ddf4f0a8e7099be8ff7fdfda60dfd6c16802c47cbb38b8",
+  "rowCount": 1,
+  "importId": "portal-a-2026-11-gross",
+  "harborReference": "partner_metrics:3",
+  "harborStatus": "quarantined",
+  "replay": false,
+  "committed": true,
+  "gate": {
+    "passed": false,
+    "failures": [
+      {
+        "code": "minimum_rows",
+        "actual": 0,
+        "required": 1
+      },
+      {
+        "code": "rejection_rate",
+        "actual": 1,
+        "maximum": 0
+      }
+    ]
+  },
+  "elapsedMs": 872
+}

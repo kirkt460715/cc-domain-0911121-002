@@ -1,0 +1,16 @@
+{
+  "error": "login_expired",
+  "stage": "session",
+  "message": "演练故障：会话已被结束",
+  "context": {
+    "action": "login"
+  },
+  "runId": "drill-a-expired",
+  "state": "failed",
+  "filters": {
+    "org": "a",
+    "period": "2026-10",
+    "metric": "net"
+  },
+  "elapsedMs": 497
+}

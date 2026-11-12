@@ -1,0 +1,17 @@
+{
+  "error": "filter_withdrawn",
+  "stage": "filters",
+  "message": "服务端拒绝了筛选：筛选项已撤回",
+  "context": {
+    "status": "筛选项已撤回",
+    "org": "a"
+  },
+  "runId": "drill-a-withdrawn",
+  "state": "failed",
+  "filters": {
+    "org": "a",
+    "period": "2026-10",
+    "metric": "net"
+  },
+  "elapsedMs": 20437
+}
